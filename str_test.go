@@ -33,3 +33,26 @@ func TestTrimSides(t *testing.T) {
 		t.Fatalf("\nExpected:\t%s\nActual:\t\t%s", expected, actual)
 	}
 }
+
+func TestCenter(t *testing.T) {
+	str := "center me"
+	width := 20
+	expected := "     center me      " // Left padding is shorter than right
+	actual := Center(str, width)
+
+	if expected != actual {
+		t.Fatalf("\nExpected:\t%s\nActual:\t\t%s", expected, actual)
+	}
+}
+
+// Center text with custom multi-character left fill and right fill
+func TestCenterCustom(t *testing.T) {
+	str := "center me"
+	width := 20
+	expected := "[[[[[[center me]]]]]]" // Width is actually 21, fill is too large
+	actual := CenterCustom(str, width, "[[", "]]")
+
+	if expected != actual {
+		t.Fatalf("\nExpected:\t%s\nActual:\t\t%s", expected, actual)
+	}
+}
