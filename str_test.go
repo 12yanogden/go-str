@@ -68,3 +68,15 @@ func TestPadLeft(t *testing.T) {
 		t.Fatalf("\nExpected:\t'%s'\nActual:\t\t'%s'\n", expected, actual)
 	}
 }
+
+func TestLeft(t *testing.T) {
+	width := 10
+	expected := "pad->     "
+	actual := "pad->"
+
+	Left(&actual, &width)
+
+	if expected != actual {
+		t.Fatalf("\nExpected:\t'%s'\nActual:\t\t'%s'\n", expected, actual)
+	}
+}

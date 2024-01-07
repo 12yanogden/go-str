@@ -41,3 +41,13 @@ func divideAndCeil(num1 int, num2 int) int {
 func PadLeft(str *string, padCount *int) {
 	*str = *str + strings.Repeat(" ", *padCount)
 }
+
+func Left(str *string, width *int) {
+	padCount := 0
+
+	if *width > len(*str) {
+		padCount = (*width)-len(*str)
+	}
+
+	*str = *str + strings.Repeat(" ", padCount)
+}
