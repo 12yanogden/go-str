@@ -37,3 +37,7 @@ func CenterCustom(str string, width int, leftFill string, rightFill string) stri
 func divideAndCeil(num1 int, num2 int) int {
 	return int(math.Ceil(float64(num1) / float64(num2)))
 }
+
+func PadLeft(str *string, padCount *int) {
+	*str = *str + strings.Repeat(" ", *padCount)
+}

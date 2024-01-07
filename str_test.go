@@ -56,3 +56,15 @@ func TestCenterCustom(t *testing.T) {
 		t.Fatalf("\nExpected:\t%s\nActual:\t\t%s", expected, actual)
 	}
 }
+
+func TestPadLeft(t *testing.T) {
+	padCount := 5
+	expected := "pad->     "
+	actual := "pad->"
+
+	PadLeft(&actual, &padCount)
+
+	if expected != actual {
+		t.Fatalf("\nExpected:\t'%s'\nActual:\t\t'%s'\n", expected, actual)
+	}
+}
