@@ -1,3 +1,3 @@
-module github.com/12yanogden/str
+module github.com/12yanogden/go-str
 
-go 1.21.5
+go 1.23.0
